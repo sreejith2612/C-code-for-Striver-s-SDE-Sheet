@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter n";
+    cin>>n;
+    int row[n],col[n],matrix[n][n];
+    cout<<"enter the matrix";
+    for(int i=0;i<n;i++)
+    {
+        row[i]=1;
+        col[i]=1;
+    }
+    for(i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>matrix[i][j];
+            if(matrix[i][j]==0)
+            {
+                row[i]=0;
+                col[j]=0;
+            }
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(row[i]==0 && col[j]==0)
+            {
+                cout<<"0"<<" ";
+            }
+            else{
+                cout<<matrix[i][j]<<" ";
+            }
+        }
+        cout<<endl;
+    }
+}
